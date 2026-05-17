@@ -150,7 +150,6 @@ Zync/
         ├── components/
         │   ├── auth/
         │   ├── chat/
-        │   ├── common/
         │   ├── layout/
         │   ├── post/
         │   ├── profile/
