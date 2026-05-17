@@ -1,5 +1,5 @@
 const { createPostSchema , updatePostSchema } = require('../validators/postValidator');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const fs = require('fs');
 const { Op ,Sequelize } = require('sequelize');
 const { Post, User, Like, Comment, Follow } = require('../models');

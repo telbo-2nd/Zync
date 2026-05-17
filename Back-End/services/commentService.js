@@ -1,6 +1,6 @@
 const Comment = require('../models/commentModel');
 const Post = require('../models/postModel');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const { createCommentSchema } = require('../validators/commentValidator');
 const { createNotification } = require('./notificationService');
 

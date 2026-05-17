@@ -1,5 +1,5 @@
 const { Notification , User } = require('../models');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 
 //create noti
 exports.createNotification = async (io, { userId, senderId, type, postId = null, messageId = null }) => {

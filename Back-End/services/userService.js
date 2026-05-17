@@ -1,7 +1,7 @@
 const { Post } = require('../models');
 const Follow = require('../models/followModel');
 const User = require('../models/userModel');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const userValidator = require('../validators/userValidator');
 const { createNotification } = require('./notificationService');
 const { Op } = require('sequelize');

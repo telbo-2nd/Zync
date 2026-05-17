@@ -1,6 +1,6 @@
 const { Conversation, Message, User, Notification } = require('../models');
 const { createNotification } = require('./notificationService');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const { Op } = require('sequelize');
 // get or create a conversation between two users
 exports.getOrCreateConversation = async (userId, otherUserId) => {

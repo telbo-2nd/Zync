@@ -5,7 +5,7 @@ const { sendOTP } = require('../utils/mailer');
 const User = require('../models/userModel');
 const Follow = require('../models/followModel');
 const Post = require('../models/postModel');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const bcrypt = require('bcrypt');
 
 // Register

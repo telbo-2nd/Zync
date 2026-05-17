@@ -1,5 +1,5 @@
 const { Like, Post } = require('../models');
-const AppError = require('../utils/appError');
+const AppError = require('../utils/AppError');
 const { createNotification } = require('./notificationService');
 
 exports.toggleLike = async function (postId, userId, io) {
