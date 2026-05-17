@@ -2,7 +2,7 @@
 const router = require("express").Router();
 
 // Controller
-const authController = require("../controllers/authcontroller");
+const authController = require("../controllers/authController");
 
 // Middleware
 const {authMiddleware} = require("../middleWares/authMiddleWare");
