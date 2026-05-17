@@ -66,16 +66,19 @@ export default function useProfile(userId = null) {
     };
 
     const handleUpdateProfile = async (data) => {
-        try {
-        const res = await userService.updateProfile(data);
+    try {
+        const formData = new FormData();
+        Object.keys(data).forEach(key => {
+            if (data[key]) formData.append(key, data[key]);
+        });
+        const res = await userService.updateProfile(formData);
         setProfile(res.data);
         dispatch(setUser(res.data));
         return true;
-        } catch (err) {
+    } catch (err) {
         throw err;
-        }
-    };
-
+    }
+};
     return {
         profile, posts, followers, following,
         isFollowing, loading, isMyProfile,

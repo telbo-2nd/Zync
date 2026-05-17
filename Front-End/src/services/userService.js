@@ -13,9 +13,11 @@ const userService = {
     },
 
     updateProfile: async (data) => {
-        const res = await api.put("/users/profile", data);
-        return res.data;
-    },
+    const res = await api.put("/users/me/profile", data, {
+        headers: { "Content-Type": "multipart/form-data" }
+    });
+    return res.data;
+},
 
     getFollowers: async (userId) => {
     const res = await api.get(`/users/${userId}/followers`);
