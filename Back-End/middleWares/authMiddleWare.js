@@ -1,5 +1,5 @@
 const { verifyToken } = require("../utils/jwt");
-const AppError = require("../utils/appError");
+const AppError = require("../utils/AppError");
 
 exports.authMiddleware = (req, res, next) => {
 
