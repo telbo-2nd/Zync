@@ -19,14 +19,14 @@ export default function useMessages(conversationId) {
         if (!conversationId) return;
         fetchMessages();
         setupSocket();
-        markMessageNotificationsAsRead(); // ✅
+        markMessageNotificationsAsRead(); 
 
         return () => {
         if (socketRef.current) socketRef.current.disconnect();
         };
     }, [conversationId]);
 
-    // ✅ mark كل الـ message notifications كـ read
+    
     const markMessageNotificationsAsRead = async () => {
         try {
         const unread = notifications.filter(
@@ -54,7 +54,7 @@ export default function useMessages(conversationId) {
     };
 
     const setupSocket = () => {
-        socketRef.current = io("http://localhost:3000", {
+        socketRef.current = io("https://zync-production-be45.up.railway.app", {
         query: { token },
         transports: ["websocket"],
         });

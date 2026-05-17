@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import { addNotification } from "../store/slices/notificationSlice";
 
-const SOCKET_URL = "http://localhost:3000";
+const SOCKET_URL = "https://zync-production-be45.up.railway.app";
 
 export default function useSocket() {
     const dispatch = useDispatch();
@@ -38,10 +38,10 @@ export default function useSocket() {
         dispatch(addNotification(notification));
         });
 
-        // ✅ ضيف دي
+        
         socket.on("message:new", (data) => {
         console.log("📨 New message:", data);
-        // بعت notification للـ Redux عشان يحدث الـ counter
+        
         dispatch(addNotification({
             type: "message",
             isRead: false,

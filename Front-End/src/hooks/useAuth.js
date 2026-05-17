@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setCredentials } from "../store/slices/authSlice";
 
 
-const API = "http://localhost:3000";
+const API = "https://zync-production-be45.up.railway.app";
 
 export default function useAuth() {
     const navigate = useNavigate();

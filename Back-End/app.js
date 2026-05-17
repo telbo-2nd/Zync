@@ -9,7 +9,7 @@ const errorHandler = require('./middleWares/errorHandler');
 const app = express();
 
 app.use(cors({
-    origin: 'https://your-vercel-frontend-url.vercel.app',
+    origin: 'https://zync-ql3v.vercel.app',
     credentials: true
 }));
 app.use(express.json());
