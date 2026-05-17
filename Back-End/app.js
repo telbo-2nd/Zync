@@ -4,7 +4,7 @@ const path = require('path');
 
 require('./models/index');
 
-const errorHandler = require('./middlewares/errorHandler');
+const errorHandler = require('./middleWares/errorHandler');
 
 const app = express();
 
