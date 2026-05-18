@@ -12,13 +12,13 @@ console.log("Mail config:", {
 const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     port: Number(process.env.MAIL_PORT),
-    secure: false, // 587 uses STARTTLS
+    secure: true, 
     auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
     },
     tls: {
-        rejectUnauthorized: false, // development only
+        rejectUnauthorized: false, 
     },
 });
 
