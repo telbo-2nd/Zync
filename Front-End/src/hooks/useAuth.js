@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setCredentials } from "../store/slices/authSlice";
 
 
-const API =import.meta.env.VITE_API_URL;
+const API ="http://localhost:3000";
 
 export default function useAuth() {
     const navigate = useNavigate();

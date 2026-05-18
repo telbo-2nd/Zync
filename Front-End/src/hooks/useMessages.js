@@ -54,7 +54,7 @@ export default function useMessages(conversationId) {
     };
 
     const setupSocket = () => {
-        socketRef.current = io(import.meta.env.VITE_API_URL, {
+        socketRef.current = io("http://localhost:3000", {
         query: { token },
         transports: ["websocket"],
         });

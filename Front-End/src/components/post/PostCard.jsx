@@ -72,7 +72,7 @@ export default function PostCard({ post }) {
                     src={getImageUrl(media.url)}
                     className="w-full rounded-xl object-cover max-h-80" alt="" />
                 ) : (
-                <video key={i} src={`${import.meta.env.VITE_API_URL}/${media.url}`}
+                <video key={i} src={`http://localhost:3000/${media.url}`}
                     className="w-full rounded-xl max-h-80" controls />
                 )
             ))}
