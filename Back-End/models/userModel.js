@@ -53,7 +53,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true,
     validate: {
-        len: [OTP_LENGTH, OTP_LENGTH]
+        len: [parseInt(OTP_LENGTH), parseInt(OTP_LENGTH)]
     }
     },
 

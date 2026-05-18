@@ -54,7 +54,7 @@ export default function useMessages(conversationId) {
     };
 
     const setupSocket = () => {
-        socketRef.current = io("https://zync-production-be45.up.railway.app", {
+        socketRef.current = io(import.meta.env.VITE_API_URL, {
         query: { token },
         transports: ["websocket"],
         });

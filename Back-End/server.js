@@ -16,7 +16,7 @@ const io = new Server(httpServer, {
     cors: {
 
         //will be updated to actual frontend URL in production
-        origin: 'https://zync-ql3v.vercel.app', 
+        origin: 'https://zync-ochre.vercel.app', 
         credentials: true,
         methods: ['GET', 'POST']
     }

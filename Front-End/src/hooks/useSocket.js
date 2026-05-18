@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import { addNotification } from "../store/slices/notificationSlice";
 
-const SOCKET_URL = "https://zync-production-be45.up.railway.app";
+const SOCKET_URL = import.meta.env.VITE_API_URL;
 
 export default function useSocket() {
     const dispatch = useDispatch();

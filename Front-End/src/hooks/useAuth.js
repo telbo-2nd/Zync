@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setCredentials } from "../store/slices/authSlice";
 
 
-const API = "https://zync-production-be45.up.railway.app";
+const API =import.meta.env.VITE_API_URL;
 
 export default function useAuth() {
     const navigate = useNavigate();

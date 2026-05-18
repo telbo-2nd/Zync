@@ -72,13 +72,13 @@ export default function ProfilePosts({ userId }) {
                 {post.mediaUrls?.length > 0 ? (
                     post.mediaUrls[0].type === "image" ? (
                     <img
-                        src={`http://localhost:3000/${post.mediaUrls[0].url}`}
+                        src={`${import.meta.env.VITE_API_URL}/${post.mediaUrls[0].url}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         alt=""
                     />
                     ) : (
                     <video
-                        src={`http://localhost:3000/${post.mediaUrls[0].url}`}
+                        src={`${import.meta.env.VITE_API_URL}/${post.mediaUrls[0].url}`}
                         className="w-full h-full object-cover"
                     />
                     )
