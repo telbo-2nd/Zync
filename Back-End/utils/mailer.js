@@ -1,10 +1,18 @@
-const { Resend } = require('resend');
-const resend = new Resend(process.env.RESEND_API_KEY);
+const nodemailer = require("nodemailer");
 
-exports.sendOTP = async function (email, otp, subject = "OTP Verification") {
-    console.log("Sending OTP to:", email, "OTP:", otp);
-    await resend.emails.send({
-        from: 'kamelabdelrahman73@gmail.com',
+const transporter = nodemailer.createTransport({
+    host: process.env.MAIL_HOST,
+    port: Number(process.env.MAIL_PORT),
+    secure: false,
+    auth: {
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASS,
+    },
+});
+
+exports.sendOTP = function (email, otp, subject = "OTP Verification") {
+    return transporter.sendMail({
+        from: `"Zync" <${process.env.MAIL_USER}>`,
         to: email,
         subject: subject,
         html: `
