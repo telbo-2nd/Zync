@@ -23,6 +23,7 @@
     "mysql2": "^3.22.3",
     "nodemailer": "^8.0.7",
     "otp-generator": "^4.0.1",
+    "resend": "^6.12.3",
     "sequelize": "^6.37.8",
     "socket.io": "^4.8.3"
   }
