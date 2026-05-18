@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 exports.sendOTP = async function (email, otp, subject = "OTP Verification") {
     console.log("Sending OTP to:", email, "OTP:", otp);
     await resend.emails.send({
-        from: 'Zync <onboarding@resend.dev>',
+        from: 'kamelabdelrahman73@gmail.com',
         to: email,
         subject: subject,
         html: `
