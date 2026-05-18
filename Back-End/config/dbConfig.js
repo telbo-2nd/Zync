@@ -10,7 +10,10 @@ const sequelize = new Sequelize({
     password : process.env.DB_PASSWORD,
 
     database : process.env.DB_NAME,
-    dialect : process.env.DB_DRIVER
+    dialect : 'mysql',
+    dialectOptions: {
+        ssl: false
+    }
 });
 
 async function connectToDB() {
